@@ -9,8 +9,8 @@ const api = require('./routes/api');
 require('dotenv').config();
 const app = express();
 
-let ec2_site = process.env.EC2_API_KEY + ":8080";
-let local_site = process.env.LOCAL_API + ":8080";
+let ec2_site = process.env.EC2_API_KEY + ":3000";
+let local_site = process.env.LOCAL_API + ":3000";
 let allowedOrigins = [ec2_site, local_site];
 
 class Application {
