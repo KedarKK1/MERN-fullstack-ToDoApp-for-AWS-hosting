@@ -1,6 +1,14 @@
 import axios from 'axios'
 
-const URL='http://localhost:3000'
+// const URL='http://localhost:3000'
+const dev = "http://localhost:4000";
+const prod = "http://ec2-35-154-106-36.ap-south-1.compute.amazonaws.com:3000";
+
+export const URL =
+  window.location.hostname.split(":")[0] === "localhost" ||
+  window.location.hostname.includes("192")
+    ? dev
+    : prod;
 
 //POST login by address http://localhost:3000/api/user/login
 export const login=(user,password) =>{
