@@ -9,6 +9,7 @@ Added Batch file to open both client and server on clicking batch file!
 </h2>
 
 <br><br><br>
+
 <div align='center'>
     <h2>LogIn</h2>
     <img style='border-radius:5px' src="https://github.com/0AliReza0/MERN-Stack-todo-website/blob/517cfce1e892ad694cc8c8c5af4bab25c2a1c19d/images/login.png"></img>
@@ -46,83 +47,92 @@ Added Batch file to open both client and server on clicking batch file!
 <img src="https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white"></img>
 <img src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white"></img>
 
-
-
-
 <br><br><br><br>
 
 <h1 align='center'><b>Requirements</b></h1>
 
-Download and install ``NodeJS`` from official website <a href="https://nodejs.org/">nodeJS.org</a>
+Download and install `NodeJS` from official website <a href="https://nodejs.org/">nodeJS.org</a>
 
 <br>
 
-Download and install ``MongoDB`` from official website <a href="https://www.mongodb.com/try/download/community">mongoDB.com</a>
-
+Download and install `MongoDB` from official website <a href="https://www.mongodb.com/try/download/community">mongoDB.com</a>
 
 <br><br><br><br>
 
 <h1 align='center'><b>How To Run</b></h1>
 
-At first you have to clone the project and open it in ``IDE``
+At first you have to clone the project and open it in `IDE`
 
 <br>
 
 - Method one -
+
 ```
 npm run start-both
 ```
 
-(If any error, then use 
+(If any error, then use
+
 ```
 chmod +x start_client.sh
 chmod +x start_server.sh
 chmod +x start_both.sh
 sudo apt install dos2unix # to convert convert the line endings of the script to Unix format (LF) using the dos2unix utility
-dos2unix start_client.sh 
-dos2unix start_server.sh 
-dos2unix start_both.sh 
+dos2unix start_client.sh
+dos2unix start_server.sh
+dos2unix start_both.sh
 ./start_both.sh # starting both server & client
 ```
 
-If it gives mongoDB error, as MongoDB atlas is not configured for your EC2 VM network ip address, 
-check your ec2 ip address using 
+If it gives mongoDB error, as MongoDB atlas is not configured for your EC2 VM network ip address,
+check your ec2 ip address using
+
 ```
 ssh -i /path/to/your/key.pem ubuntu@your_ec2_public_ip
 curl ifconfig.me
 ```
 
+Create .env file inside /server module and give it
 
+```
+MONGODB_API_KEY=your_ec2_instance_link_without_ending_/_sign
+EC2_API_KEY=your_ec2_instance_link_without_ending_/_sign
+LOCAL_API=https://localhost
+
+eg.
+MONGODB_API_KEY=mongodb+srv://myaccounthere:mypasswordhere@kosh@awstodolistcluster.g5d>
+EC2_API_KEY=http://ec2-36-247-136-16.ap-south-1.compute.amazonaws.com
+LOCAL_API=https://localhost
+```
 
 )
 
 <br>
 
-- Method 2 - 
+- Method 2 -
 
-Open IDE's terminal and then write  ``~ cd server`` and enter
-
-<br>
-
-After that write ``~ npm i`` and enter
+Open IDE's terminal and then write `~ cd server` and enter
 
 <br>
 
-type ``~ npm start`` and then enter
+After that write `~ npm i` and enter
 
 <br>
 
-Now open another terminal and write ``~ cd client``
+type `~ npm start` and then enter
 
 <br>
 
-And then write ``~ npm i`` and ``~ npm start``
+Now open another terminal and write `~ cd client`
 
 <br>
 
-Congratulations ,now you can ``signup`` and use the website
+And then write `~ npm i` and `~ npm start`
 
-Dummy user => 
+<br>
+
+Congratulations ,now you can `signup` and use the website
+
+Dummy user =>
 username - JayeshJadhav
 password - JayesJadha@123
-
