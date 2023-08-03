@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 const winston = require('winston');
 require('winston-mongodb');
 require('express-async-errors');
-const ErrorMiddleware = require('./http/middleware/Error');
+const ErrorMiddleware = require('./http/middleware/error');
 const api = require('./routes/api');
 require('dotenv').config();
 const app = express();
