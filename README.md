@@ -1,5 +1,7 @@
 <h1 align='center' style="font-size:5rem"><b>Todo List Website for AWS Hosting</b></h1>
 
+Remaining - to create .env in server and then npm i in client
+
 </div>
 <br><br><br>
 <h2 align='center'>
