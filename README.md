@@ -1,6 +1,6 @@
 <h1 align='center' style="font-size:5rem"><b>Todo List Website for AWS Hosting</b></h1>
 
-Remaining - to create .env in server and then npm i in client
+Added Batch file to open both client and server on clicking batch file!
 
 </div>
 <br><br><br>
@@ -67,6 +67,15 @@ Download and install ``MongoDB`` from official website <a href="https://www.mong
 At first you have to clone the project and open it in ``IDE``
 
 <br>
+
+- Method one -
+```
+npm run start-both
+```
+
+<br>
+
+- Method 2 - 
 
 Open IDE's terminal and then write  ``~ cd server`` and enter
 

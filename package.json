@@ -1,0 +1,10 @@
+{
+    "name": "your-project-name",
+    "version": "1.0.0",
+    "scripts": {
+      "start-client": "cd client && npm install && npm start",
+      "start-server": "cd server && npm install && npm start",
+      "start-both": "start cmd /c \"npm run start-client\" && start cmd /c \"npm run start-server\""
+    }
+  }
+  
