@@ -79,6 +79,8 @@ chmod +x start_client.sh
 chmod +x start_server.sh
 chmod +x start_both.sh
 sudo apt install dos2unix # to convert convert the line endings of the script to Unix format (LF) using the dos2unix utility
+dos2unix start_client.sh 
+dos2unix start_server.sh 
 dos2unix start_both.sh 
 ./start_both.sh # starting both server & client
 ```
