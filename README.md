@@ -85,6 +85,14 @@ dos2unix start_both.sh
 ./start_both.sh # starting both server & client
 ```
 
+If it gives mongoDB error, as MongoDB atlas is not configured for your EC2 VM network ip address, 
+check your ec2 ip address using 
+```
+ssh -i /path/to/your/key.pem ubuntu@your_ec2_public_ip
+curl ifconfig.me
+```
+
+
 
 )
 

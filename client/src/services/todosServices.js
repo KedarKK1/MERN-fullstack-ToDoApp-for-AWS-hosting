@@ -1,8 +1,8 @@
 import axios from 'axios'
 
 // const URL='http://localhost:3000'
-const dev = "http://localhost:4000";
-const prod = "http://ec2-35-154-106-36.ap-south-1.compute.amazonaws.com:3000";
+const dev = "http://localhost:8080";
+const prod = "http://ec2-35-154-106-36.ap-south-1.compute.amazonaws.com:8080";
 
 export const URL =
   window.location.hostname.split(":")[0] === "localhost" ||
