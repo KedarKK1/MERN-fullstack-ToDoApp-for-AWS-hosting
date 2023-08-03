@@ -9,6 +9,10 @@ const api = require('./routes/api');
 require('dotenv').config();
 const app = express();
 
+let ec2_site = process.env.EC2_API_KEY + ":3000";
+let local_site = process.env.LOCAL_API + ":3000";
+let allowedOrigins = [ec2_site, local_site];
+
 class Application {
   constructor() {
     this.setupExpressServer();
@@ -17,6 +21,9 @@ class Application {
     this.setupConfigs();
   }
 
+  // Allow requests from the specific origin (replace with your client's domain)
+
+
   setupRoutesAndMiddlewares() {
     // built-in middleware
     app.use(express.json());
@@ -24,7 +31,17 @@ class Application {
     app.use(express.static('public'));
 
     // third-party middleware
-    app.use(cors());
+    app.use(cors(
+      {
+        origin: function (origin, callback) {
+          if (!origin || allowedOrigins.includes(origin)) {
+            callback(null, true);
+          } else {
+            callback(new Error('Not allowed by CORS'));
+          }
+        }
+      }
+    ));
 
     //routes
     app.use('/api', api);
